@@ -14,3 +14,5 @@ SoC-Intro to WebDev
   - Creating an unorderded list with **customised bullets**.
 ### Assignment submission statuses
 - [x] Assignment-1 due at 11/04/21
+- [ ] Assignment-2 due at 19/05/21
+- Working on my own website  
