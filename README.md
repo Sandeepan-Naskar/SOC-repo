@@ -12,7 +12,13 @@ SoC-Intro to WebDev
   - Creating a **responsive Window/Web page** by using `vw` and `vh`. 
   - The `<label></label>` tag and the `<input></input>` tag with `type="text"`, `"password"` and `"submit"`.
   - Creating an unorderded list with **customised bullets**.
+- **Assignment-2** was based mainly on JavaScript and CSS and the things I learnt are:
+  - Creating the toggle button using multiple concepts in CSS and functions in JS.
+  - Creating the login and logout buttons using functions in JS.
+  - Adding HTML code in JS like `document.getElementById("demo").innerHTML = "<tag> HTML code </tag>";`
+  - Adding date using `Date()`
+  - Changing style of the body by accessing a class for dark mode by using `document.body.classList.toggle("dark-mode");`
 ### Assignment submission statuses
 - [x] Assignment-1 due at 11/04/21
-- [ ] Assignment-2 due at 19/05/21
+- [x] Assignment-2 due at 19/05/21
 - Working on my own website  
