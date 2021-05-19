@@ -8,11 +8,40 @@
 
 <!--script function for the text to fade in and out-->
 <script type="text/javascript">
+
+	var x = document.getElementById("x1").innerHTML;
+	var y = document.getElementById("x2").innerHTML;
+	var x1 = x;
+	var y1 = y;
+	
     setInterval(function() {
       document.getElementById("blink").style.opacity = (document.getElementById("blink").style.opacity == 0 ? 1 : 0);
 	}, 1000);
+	
+    function login() {
+		
+    	var ldap = document.getElementById("ldap").value;
+		if(ldap>=200000000 && ldap<=202000000){
+        	x = "<input id='logout' type='submit' value='Logout' onclick='logout()' style='width:125px; font-size:15px;'>";;
+            y = "&nbsp"+Date();
+			document.getElementById("x1").innerHTML = x;
+			document.getElementById("x2").innerHTML = y;
+        }else{
+			alert("Ldap-id out of range");
+		}
+		
+    }
+    function dark() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    function logout() {
+	document.getElementById("x1").innerHTML = x1;
+	document.getElementById("x2").innerHTML = y1;
+    }
+
 </script>
-    
+
 </head>
 
 <style type="text/css">
@@ -71,7 +100,7 @@
 
 /*styling the table units in the body*/
   td.box{
-	border: 1px solid black; 
+	border: 1px solid grey; 
 	padding-left:3px;
 	width:50vw;
   }
@@ -81,110 +110,177 @@
 	transition:1s;
   }
 
+/*styling of the toggle button*/
+/*size of the switch*/
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+/*positioning and styling of the toggle*/
+  .toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    transition: .4s;
+    border-radius: 40px;
+  }
+/*styling of the before version*/
+  .toggle:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 5px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .toggle {
+    background-color: cyan;
+  }
+
+  input:checked + .toggle:before {
+    transform: translateX(25px);
+  }
+  
+/*dark mode style*/
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+
 </style>
 
 
 <body>
 
-    <table class="top">
-    	<tr class="top">
-    		<td class="top" style="width:50vw">
-              <label style="font-size:2em;"><img src="https://seal.digicert.com/seals/cascade/?tag=oFgDNCGT&referer=internet.iitb.ac.in&lang=en&format=png&seal=3&size=m" align="left">&emsp;<b>Computer Center</b></label>
-            </td>
+	<div id="x1">
+    
+	<table class="top">
+    		<tr class="top">
+			<td class="top" style="width:50vw">
+			      <label style="font-size:2em;"><img src="https://seal.digicert.com/seals/cascade/?tag=oFgDNCGT&referer=internet.iitb.ac.in&lang=en&format=png&seal=3&size=m" align="left">&emsp;<b>Computer Center</b></label>
+		    	</td>
             
-          	<td  style="width:16.67vw;">
-            	<label style="font-size:18px;">Ldap-id: </label> <br>
-               	<input type="text" style="width:175px">
-          	</td>
-     
-     		<td  style="width:16.67vw;">
-      			<label style="font-size:18px;">Password:</label><br>
-      			<input type="password" style="width:175px">
-	  		</td>
-	 
-      		<td  style="width:16.67vw;">
-      			<input type="submit" value="Login" style="width:125px; font-size:15px;">
-     		</td>
-    	</tr>
-    </table>
+			<td  style="width:16.67vw;">
+				<label style="font-size:18px;">Ldap-id: </label> <br>
+				<input id="ldap" type="text" style="width:175px">
+			</td>
+
+			<td  style="width:16.67vw;">
+				<label style="font-size:18px;">Password:</label><br>
+				<input type="password" style="width:175px">
+			</td>
+			
+			<td  style="width:16.67vw;">
+				<br><input id="login" type="submit" value="Login" onclick="login()" style="width:125px; font-size:15px;">
+			</td>
+    		</tr>
+    	</table>
+	
+	</div>
+	
+	<div style="margin:8px;">
+	
+	<label class="switch" >
+		<input type="checkbox" onclick="dark()" >
+		<span class="toggle" ></span>
+	</label>	
+	
+	</div>
+		
+	<div id="x2">
+	
+	<table style="width:100%; border:1px solid grey; padding:4px;">
+    		<tr>
+      			<th style="color:red; border: 1px solid grey; padding:4px; font-size:18px;"><div id="blink">### No planned downtime ###<div></th>
+    		</tr>
+    	</table>
     
-	<table style="width:100%; border:1px solid black; padding:4px;">
-    	<tr>
-      		<th style="color:red; border: 1px solid black; padding:4px; font-size:18px;"><div id="blink">### No planned downtime ###<div></th>
-    	</tr>
-    </table>
-    
-    <table style="border: 1px solid black;" cellspacing="6px">
-    	<tr>
-      		<td class="box">
-        		<h3 class="subheading1">Beware of Phishing Attacks:</h3>
+	<table style="border: 1px solid black;" cellspacing="6px">
+		<tr>
+			<td class="box">
+				<h3 class="subheading1">Beware of Phishing Attacks:</h3>
 				<p class="main">
-                  <ul class="dash">
-                    <li>Do not give your <strong>LDAP USERID & PASSWORD</strong> to anyone.
-                    <li>Do not enter LDAP login information in any pop up window.
-                    <li>Do not reply to any mail asking your login information for any
-                    reason.
-                    <li>Do not enter your LDAP login information on any unknown website.
-                    <li>Phishing is a fraudulent attempt, usually made through email seeking
-                    your userid, password and personal information.
-                    <li>If you receive any such email, Please report <a href="https://help-cc.iitb.ac.in/">here</a> immediately.
-                    <li>Immediately change your passwords if you have accidentally revealed
-                    your credentials.
-                    <li><strong>Computer Center never asks you for such information.</strong>
-                  </ul>
-                </p>
+				  <ul class="dash">
+				    <li>Do not give your <strong>LDAP USERID & PASSWORD</strong> to anyone.
+				    <li>Do not enter LDAP login information in any pop up window.
+				    <li>Do not reply to any mail asking your login information for any
+				    reason.
+				    <li>Do not enter your LDAP login information on any unknown website.
+				    <li>Phishing is a fraudulent attempt, usually made through email seeking
+				    your userid, password and personal information.
+				    <li>If you receive any such email, Please report <a href="https://help-cc.iitb.ac.in/">here</a> immediately.
+				    <li>Immediately change your passwords if you have accidentally revealed
+				    your credentials.
+				    <li><strong>Computer Center never asks you for such information.</strong>
+				  </ul>
+				</p>
 
-                <h3 class="subheading2">Example of Phishing Email:</h3>
+				<h3 class="subheading2">Example of Phishing Email:</h3>
 
-                <p class="sub">
-                  From: support@iitb.ac.in<br>
-                  Sent: Thu, Mar 08, 2012<br>
-                  Subject: UPGRADE EMAIL ACCOUNT<br>
-                  We are currently upgrading our Server for our Account Holders. In order to upgrade your account, you need to assist us by sending the information below or else your Account might be lost.<br>
-                  Provide the below information :<br>
-                  User Name :<br>
-                  Pass Word :<br>
-                  Regards,<br>
-                  ADMIN, IIT Bombay<br>
-                </p>
-      		</td>
-      
-      		<td class="box">
-              <h3 class="subheading1">Online IT Agreement/Policy:</h3>
+				<p class="sub">
+				  From: support@iitb.ac.in<br>
+				  Sent: Thu, Mar 08, 2012<br>
+				  Subject: UPGRADE EMAIL ACCOUNT<br>
+				  We are currently upgrading our Server for our Account Holders. In order to upgrade your account, you need to assist us by sending the information below or else your Account might be lost.<br>
+				  Provide the below information :<br>
+				  User Name :<br>
+				  Pass Word :<br>
+				  Regards,<br>
+				  ADMIN, IIT Bombay<br>
+				</p>
+			</td>
 
-              <ul class="dash">
-                <li>All new students, staff & faculty members must read and accept the
-                online IT agreement/policy.
-                <li>IT services are made available to users only upon acceptance of the
-                IT undertaking.
-                <li>The IT policy applies to all users of the Institute with or without
-                his knowledge about IT policy and violations will be dealt with strictly.
+			<td class="box">
+			      <h3 class="subheading1">Online IT Agreement/Policy:</h3>
 
-                <li style="font-variant:small-caps;"><h3><strong>To learn more and sign online IT Policy, click <a href="https://www.cc.iitb.ac.in/page/itaccesspolicy" class="weird"> here</a></h3></strong>
-              </ul>
+			      <ul class="dash">
+				<li>All new students, staff & faculty members must read and accept the
+				online IT agreement/policy.
+				<li>IT services are made available to users only upon acceptance of the
+				IT undertaking.
+				<li>The IT policy applies to all users of the Institute with or without
+				his knowledge about IT policy and violations will be dealt with strictly.
 
-              <h3 class="subheading2">Some Useful Links:</h3>
+				<li style="font-variant:small-caps;"><h3><strong>To learn more and sign online IT Policy, click <a href="https://www.cc.iitb.ac.in/page/itaccesspolicy" class="weird"> here</a></h3></strong>
+			      </ul>
 
-              <ul class="dash">
-                <li><div style="color:grey;"><a href="https://www.cc.iitb.ac.in/#gettingstarted-tabpane">Getting Started</a> (Faculty, Staff & Student)</div>
-                <li><a href="https://gpo.iitb.ac.in/">GPO-Webmail</a>
-                <li><a href="ftp://ftp.iitb.ac.in/">FTP-Portal</a>
-                <li><a href="https://help-cc.iitb.ac.in/">Report A Problem</a>
-              </ul>
+			      <h3 class="subheading2">Some Useful Links:</h3>
 
-              <h3 class="subheading2">CC's HelpDesk:</h3>
-              <p>
+			      <ul class="dash">
+				<li><div style="color:grey;"><a href="https://www.cc.iitb.ac.in/#gettingstarted-tabpane">Getting Started</a> (Faculty, Staff & Student)</div>
+				<li><a href="https://gpo.iitb.ac.in/">GPO-Webmail</a>
+				<li><a href="ftp://ftp.iitb.ac.in/">FTP-Portal</a>
+				<li><a href="https://help-cc.iitb.ac.in/">Report A Problem</a>
+			      </ul>
+
+			      <h3 class="subheading2">CC's HelpDesk:</h3>
+			      <p>
 				- You can visit CC's HelpDesk between<br>
 				11:00 am - 1:00 pm & 3:30 pm - 5:30 pm
 				<br><div style="font-family:monospace;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;At</div><br>
 				Ground Floor,<br>
 				New Computer Center Building,<br>
 				IIT Bombay.
-              </p>
-            </td>
-  		</tr>  
-    </table>
+			      </p>
+			</td>
+			
+		</tr>  
+	</table>
+
+	</div>
 
 </body>
+
 </html>
-<!--  https://www.w3schools.com/code/tryit.asp?filename=GPBND3VUTGQM	-->
+<!-- https://jsfiddle.net/vayhgjck/ -->
+
