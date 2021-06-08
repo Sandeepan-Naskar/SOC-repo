@@ -21,5 +21,5 @@ SoC-Intro to WebDev
 ### Assignment submission statuses
 - [x] Assignment-1 due at 11/04/21
 - [x] Assignment-2 due at 19/05/21
-- [x] Assignment-3 due at 10/06/21
+- [ ] Assignment-3 due at 10/06/21
 - Working on my own website  
