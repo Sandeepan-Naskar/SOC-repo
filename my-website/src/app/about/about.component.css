@@ -1,0 +1,21 @@
+div{
+    text-align:center;
+}
+h3{
+    color:#524c68;
+}
+img{
+    width:600px;
+    height:400px;
+}
+#name{
+    width:248px;
+    height:20px;
+}
+#comment{ 
+    resize:initial;  
+}
+#submit{
+    width:150px;
+    height:20px;
+}
