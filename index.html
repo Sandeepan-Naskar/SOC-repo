@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyWebsite</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+	body {  
+		height: 650 px;  
+		color:#022534;
+		background-color: #aebbcb;  
+		opacity:90%;
+		background-size: 100%;
+		height:100vh; 
+		background-size: cover; 
+		font-size:1.3em;
+	}  
+	footer{
+		position:fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	
+	/*************************/
+	
+	button{
+		padding:10px;
+		font-size:18px;
+		background-color: transparent;
+		border-color: transparent;
+		color:#ffffff;
+		cursor:pointer;
+		font-size:1em;
+	}
+	button.heading{
+		color: #1e202c;
+	}
+	button:checked, button:hover{
+		color:#707c92;
+		border-bottom:2px solid #707c92;
+	}
+	button.heading{
+		border-color: transparent;
+	}
+	hr{
+		background-color: #63817f;
+	}
+	
+	/**********************************/
+	
+	.foot {
+		margin: -0.65%;
+		background-color:#3d435b;
+		color:white;
+		font-variant:arial;
+		height:100px;
+		font-size:1em;
+		text-align:center;
+		padding-top: 3vh;
+	}
+	.fa {
+		padding: 15px;
+		font-size: 20px;
+		color:white;
+		width: 15px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 2px;
+	  }
+	  
+	  .fa:hover {
+		  opacity: 0.7;
+	  }
+	  
+	  /***********************************/
+	  
+	.ab{
+		text-align:center;
+	}
+	ab.h3{
+		color:#524c68;
+	}
+	ab.img{
+		width:600px;
+		height:400px;
+	}
+	#name{
+		width:248px;
+		height:20px;
+	}
+	#comment{ 
+		resize:initial;  
+	}
+	#submit{
+		width:150px;
+		height:20px;
+	}
+</style>
+<body>
+	<div id="root" class="container" style="text-align: center;">       
+	  <button id="1" class="heading" onclick="home()"><h2>Sandeepan Naskar</h2></button><br>
+	  <div style="background-color: #524c68; color:black; margin-left:-0.65vw;margin-right:-0.65vw;">
+		<button id="2" onclick="abt();">About me</button>
+		<button id="3" onclick="int();">Interests</button>
+		<button id="4" onclick="res();">Resume</button>
+		<button id="5" onclick="sugg();">Suggestions</button>
+		<button id="6" onclick="op();">Random Opinions</button><br><br>
+	  </div>
+	</div> 
+
+	
+  <div class="ab">
+    <strong>
+    <div id="home">
+        <br><br><br>
+        Welcome to my website :3<br>
+        I have created this as an SoC Project but might work on it further <br>
+        and make it my official personal websites(quite an oxymoron there huh)
+    </div>
+
+    <div id="about">
+        <h3><u>ABOUT</u></h3>
+        Hi! My name is Sandeepan Naskar (Literally written in gigantic font at the top).<br>
+        I am currently doing my undergraduate degree at IIT Bombay.<br>
+        I’m pursuing a B.Tech with CSE as my major.<br>
+        And well I am one of those students who didn't really know how to code and then acquired a taste along the way.<br>
+        Its been a year since I first learnt to type code outside notepad and <i>look dad I am making a website now</i> lol.<br>
+        You can find me anyday just sitting in front of my laptop procrastinating like a pro.
+        <br><br>
+        Here's a meme with me in it :)<br>
+        <img src="https://www.dropbox.com/s/whhzlgsxikfnjp6/Add%20a%20subheading%20%281%29.png?dl=0" alt="meme">
+        <br><br><br><br><br><br><br><br>
+
+    </div>
+
+    <div id="interest">
+        <h3><u>INTERESTS</u></h3>
+        <h3 style="color:#314238;"><u>Academic Interests</u></h3>
+        Owing to the curiosity and drive to explain things around me, I fell in love with Physics<br>
+        and I continued to feel that way in my school days and my JEE preparations and then...<br><br>
+        Oh nevermind just look at this video this kind of explains how I feel<br>
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/jm7jVi8akcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <br><br><br>
+        But now then I still do love certain aspects of the subject, especially, Astrophysics and alongwith it <br>
+        Astronomy which always has amazed me and now yay I am a "volunteer" at IITB's Astro Club.
+
+        <h3 style="color:#314238;"><u>Anime/Manga/Shows</u></h3>
+        So starting off, I love manga/anime. And unlike many weebs, One Piece is my favourite.<br>
+        (Yeah I know it's 1000+ chapters long but I love it <i>and</i> it was the first manga I read :D)<br>
+        So if you are here for anime suggestions, these are some must watch/read:-<br>
+        1. Deathnote <br>
+        2. Code Geass <br>
+        3. Attack on Titan<br>
+        These were some short masterpieces for beginners.<br>
+        4. Naruto<br>
+        5. One Piece<br>
+        These were some long classics and are more of an acquired taste.<br>
+        By the way these are not ranked in any order, I love them all.<br>
+        Wholesome anime Honourable mention (Assassination Classroom)<br><br><br>
+        Here's the infamous potato chip scene from Deathnote XD<br>
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/v5vaKvxMY-0?start=70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br><br>
+        As popular opinion goes that anime watchers don't indulge in "normal" web series, well I tend to be that way<br>
+        but I have watched FRIENDS, Game of Thrones and Community and loved all three :D   
+        <br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    
+    <div id="resume">
+        <h3><u>RESUME</u></h3>
+        Here we are. The place where you flex your nice achievements and decorate your not so nice ones.<br>
+        *Haven't started working on it yet but I'll surely put it up. Cheers :)*
+    </div>
+    <div id="suggestions">
+        <h3><u>SUGGESTIONS</u></h3>
+        Feel free to leave me any suggestions down here about how I can improve my website or anything in general.<br><br>
+        <table style=" margin-left: auto; margin-right: auto;">
+            <tr>
+                <td>
+                    Name/Alias:
+                </td>
+                <td>
+                    <input id="name" type="text" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comment:
+                </td>
+                <td>
+                    <textarea id="comment" style="height:50px; width:250px" type="comment" required></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="submit" type="submit" value="Comment!" onclick="comment();"><br><br>
+                </td>
+            </tr>
+        </table>
+        <div id="demo">
+            <h3 style="color:#314238;"><u>Comments</u></h3>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div id="opinion">
+        <h3><u>RANDOM OPINIONS</u></h3>
+        Consider this a diary or a ranting place for now where I will just come and rant about or obsess <br>
+        about stuff and give opinions nobody cares about. So let me be in peace here :) THANKS!!
+		<br><br><br><br><br><br><br><br>
+    </div>
+    </strong>
+</div>
+  
+  
+  <footer>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="foot">
+			&#169; SandeepanNaskar<br>
+			<a href="https://www.instagram.com/bajrangdal69/" class="fa fa-instagram"></a>
+			<a href="https://www.facebook.com/sandeepan.naskar.7/" class="fa fa-facebook"></a>
+			<a href="https://github.com/Sandeepan-Naskar" class="fa fa-github"></a>
+			<a href="mailto:naskarsandeepan8@gmail.com" style="color:white">Contact me</a>
+		</div>
+</footer>
+
+</body>
+
+<script>
+window.onload=function(){
+        document.getElementById("1").click();
+}
+function home(){
+    var doc = document.getElementById("1");
+    if(doc){
+        document.getElementById("home").hidden = false;
+        document.getElementById("about").hidden = true;
+        document.getElementById("interest").hidden = true;
+        document.getElementById("resume").hidden = true;
+        document.getElementById("suggestions").hidden = true;
+        document.getElementById("opinion").hidden = true;
+    }
+}
+function abt(){
+    var doc = document.getElementById("2");
+    if(doc){
+        document.getElementById("home").hidden = true;
+        document.getElementById("about").hidden = false;
+        document.getElementById("interest").hidden = true;
+        document.getElementById("resume").hidden = true;
+        document.getElementById("suggestions").hidden = true;
+        document.getElementById("opinion").hidden = true;
+    }
+}
+function int(){
+    var doc = document.getElementById("3");
+    if(doc){
+        document.getElementById("home").hidden = true;
+        document.getElementById("about").hidden = true;
+        document.getElementById("interest").hidden = false;
+        document.getElementById("resume").hidden = true;
+        document.getElementById("suggestions").hidden = true;
+        document.getElementById("opinion").hidden = true;
+    }
+}
+function res(){
+    var doc = document.getElementById("4");
+    if(doc){
+        document.getElementById("home").hidden = true;
+        document.getElementById("about").hidden = true;
+        document.getElementById("interest").hidden = true;
+        document.getElementById("resume").hidden = false;
+        document.getElementById("suggestions").hidden = true;
+        document.getElementById("opinion").hidden = true;
+    }
+}
+function sugg(){
+    var doc = document.getElementById("5");
+    if(doc){
+        document.getElementById("home").hidden = true;
+        document.getElementById("about").hidden = true;
+        document.getElementById("interest").hidden = true;
+        document.getElementById("resume").hidden = true;
+        document.getElementById("suggestions").hidden = false;
+        document.getElementById("opinion").hidden = true;
+    }
+}
+function op(){
+    var doc = document.getElementById("6");
+    if(doc){
+        document.getElementById("home").hidden = true;
+        document.getElementById("about").hidden = true;
+        document.getElementById("interest").hidden = true;
+        document.getElementById("resume").hidden = true;
+        document.getElementById("suggestions").hidden = true;
+        document.getElementById("opinion").hidden = false;
+    }
+}
+function comment() {
+    let x = Date() + document.getElementById("name").value + "<br>" + document.getElementById("comment").value;
+    document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "<br>" + x;
+    this.http.post('http://localhost/script.php', x);
+}
+  
+</script>
+
+</html>
