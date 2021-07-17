@@ -68,4 +68,4 @@ SoC-Intro to WebDev
 
 - Final Assignment:- Create a portflolio website of your own.
 
-#### So the project is officially over I suppose and above is the list of new things I took away from it and I would like further my work on the webpages I have made in order to explore the domains I have touched upon with the help of my mentor.
+#### So the project is officially over I suppose and above is the list of new things I took away from it and I would like to further my work on the webpages I have made in order to explore the domains I have touched upon with the help of my mentor.
